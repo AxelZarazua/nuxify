@@ -78,6 +78,48 @@ function nuxifyString (oldTitle) {
         .replace(/(^|\s)Мені(?=\s|$)/g, 'Нам')
         .replace(/(^|\s)мені(?=\s|$)/gi, 'нам');
 
+	//Español ajua
+	//soy => somos
+	.replace(/\bSoy\b/g, 'Somos')
+	.replace(/\bsoy\b/g, 'somos')
+        .replace(/\bSOY\b/gi, 'SOMOS')
+
+	//yo => nosotros
+	.replace(/\byo\b/g, 'nosostros')
+	.replace(/\bYo\b/g, 'Nosostros')
+        .replace(/\bYO\b/gi, 'NOSOTROS')
+
+	//hice => hicimos
+	.replace(/\bhice\b/g, 'hicimos')
+	.replace(/\bHice\b/g, 'Hicimos')
+        .replace(/\bHICE\b/gi, 'HICIMOS')
+
+	//mi => nuestro
+	.replace(/\bmi\b/g, 'nuestro')
+        .replace(/\bMI\b/gi, 'NUESTRO')
+	.replace(/\bMi\b/g, 'Nuestro')
+	.replace(/\bmío\b/g, 'nuestro')
+        .replace(/\bMÍO\b/gi, 'NUESTRO')
+	.replace(/\bMío\b/g, 'Nuestro')
+	.replace(/\bmía\b/g, 'nuestra')
+        .replace(/\bMÍa\b/gi, 'NUESTRA')
+	.replace(/\bMía\b/g, 'Nuestra')
+
+	.replace(/\bmis\b/g, 'nuestros')
+        .replace(/\bMIS\b/gi, 'NUESTROS')
+	.replace(/\bMis\b/g, 'Nuestros')
+	.replace(/\bmíos\b/g, 'nuestros')
+        .replace(/\bMÍOS\b/gi, 'NUESTROS')
+	.replace(/\bMíos\b/g, 'Nuestros')
+	.replace(/\bmías\b/g, 'nuestras')
+        .replace(/\bMÍAS\b/gi, 'NUESTRAS')
+	.replace(/\bMías\b/g, 'Nuestras')
+
+	//estuve => estubimos
+	.replace(/\bEstuve\b/g, 'Estuvimos')
+	.replace(/\bestuve\b/g, 'estuvimos')
+        .replace(/\bESTUVE\b/gi, 'ESTUVIMOS')
+
     return {
         newTitle,
         isDifferent: newTitle != oldTitle,
